@@ -38,8 +38,8 @@ git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netp
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
 
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang -b 1.21 feeds/packages/lang/golang
 
 # Modify default IP
