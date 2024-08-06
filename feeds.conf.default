@@ -3,8 +3,8 @@
 #src-git passwall https://github.com/xiaorouji/openwrt-passwall 
 
 
-src-git kenzo https://github.com/kenzok8/openwrt-packages
-src-git small https://github.com/kenzok8/small
+#src-git kenzo https://github.com/kenzok8/openwrt-packages
+#src-git small https://github.com/kenzok8/small
 
 src-git packages https://github.com/immortalwrt/packages.git^fb1a9c0a222465ffe660d385ce18d1ca70b65f3a
 src-git luci https://github.com/immortalwrt/luci.git^ac5290ab0e56ddb0870f5bf6bac3006f03534057
