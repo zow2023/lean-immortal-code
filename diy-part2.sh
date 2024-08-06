@@ -24,7 +24,7 @@ git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp
 git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
+git clone https://github.com/QiuSimons/luci-app-daed-next package/dae-next
 
 #rm -rf feeds/packages/net/{xray-core,chinadns-ng,hysteria,v2ray-plugin}
 
