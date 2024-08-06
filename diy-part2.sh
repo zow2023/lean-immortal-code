@@ -11,18 +11,19 @@
 #
 
 #git clone https://github.com/kiddin9/luci-app-dnsfilter package/luic-app-dnsfilter
-git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
-git clone https://github.com/kingyond/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
+#git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
+#git clone https://github.com/kingyond/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
 #git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
 git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
 ##git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
-git clone https://github.com/gSpotx2f/luci-app-cpu-status package/luci-app-cpu-status
-git clone https://github.com/gSpotx2f/luci-app-cpu-perf package/luci-app-cpu-perf
-git clone https://github.com/gSpotx2f/luci-app-interfaces-statistics package/luci-app-interfaces-statistics
-git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp-status
+#git clone https://github.com/gSpotx2f/luci-app-cpu-status package/luci-app-cpu-status
+#git clone https://github.com/gSpotx2f/luci-app-cpu-perf package/luci-app-cpu-perf
+#git clone https://github.com/gSpotx2f/luci-app-interfaces-statistics package/luci-app-interfaces-statistics
+#git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp-status
 git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
-git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
+#git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
 git clone https://github.com/QiuSimons/luci-app-daed-next package/dae-next
 
@@ -39,8 +40,8 @@ git clone https://github.com/QiuSimons/luci-app-daed-next package/dae-next
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
 
-#rm -rf feeds/packages/lang/golang
-#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+rm -rf feeds/packages/lang/golang
+git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang -b 1.21 feeds/packages/lang/golang
 
 # Modify default IP
