@@ -15,7 +15,7 @@
 #git clone https://github.com/kingyond/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
 #git clone https://github.com/sirpdboy/sirpdboy-package package/sirpdboy-package
 git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
+#git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
 ##git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
 #git clone https://github.com/gSpotx2f/luci-app-cpu-status package/luci-app-cpu-status
