@@ -25,7 +25,7 @@
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 #git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-git clone https://github.com/QiuSimons/luci-app-daed-next package/daed-next
+#git clone https://github.com/QiuSimons/luci-app-daed-next package/daed-next
 git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #rm -rf feeds/packages/net/{xray-core,chinadns-ng,hysteria,v2ray-plugin}
 
@@ -40,8 +40,8 @@ git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
 
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
+#git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
 #git clone https://github.com/kenzok8/golang -b 1.21 feeds/packages/lang/golang
 
 # Modify default IP
