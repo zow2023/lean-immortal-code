@@ -10,6 +10,8 @@
 # See /LICENSE for more information.
 #
 
+wget https://apt.llvm.org/llvm.sh chmod +x llvm.sh sudo ./llvm.sh clang-13
+
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
