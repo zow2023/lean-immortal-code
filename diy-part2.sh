@@ -25,9 +25,9 @@
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 #git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-rm -rf feeds/packages/net/daed
+
 #git clone https://github.com/QiuSimons/luci-app-daed-next package/daed-next
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
+#git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #rm -rf feeds/packages/net/{xray-core,chinadns-ng,hysteria,v2ray-plugin}
 
 #rm -rf feeds/luci/applications/luci-app-passwall
