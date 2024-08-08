@@ -10,12 +10,9 @@
 # See /LICENSE for more information.
 #
 
-# 下载脚本
-wget https://mirrors.cernet.edu.cn/llvm-apt/llvm.sh
+wget https://apt.llvm.org/llvm.sh
 chmod +x llvm.sh
-sudo ./llvm.sh 13 all -m https://mirrors.cernet.edu.cn/llvm-apt
-
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+sudo ./llvm.sh 13
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
