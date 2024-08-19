@@ -8,12 +8,6 @@
 #
 # This is free software, licensed under the MIT License.
 # See /LICENSE for more information.
-#
-
-wget https://apt.llvm.org/llvm.sh
-chmod +x llvm.sh
-sudo ./llvm.sh 13
-sudo ln -s /usr/bin/llvm-strip-13 /usr/bin/llvm-strip
 
 
 # Uncomment a feed source
