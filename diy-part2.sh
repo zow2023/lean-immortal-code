@@ -41,6 +41,8 @@ git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-ad
 
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
+git clone https://github.com/muink/openwrt-einat-ebpf.git package/einat-ebpf
+git clone https://github.com/muink/luci-app-einat.git package/luci-app-einat
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
