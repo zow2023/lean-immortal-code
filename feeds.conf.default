@@ -3,7 +3,7 @@
 #src-git passwall https://github.com/xiaorouji/openwrt-passwall
 ##src-git small https://github.com/zow2023/small
 
-src-git packages https://github.com/zow2023/lede-packages
+src-git packages https://github.com/zow2023/lede-packages.git;master
 #src-git luci https://github.com/coolsnowwolf/luci
 src-git luci https://github.com/coolsnowwolf/luci.git;openwrt-23.05
 src-git routing https://github.com/coolsnowwolf/routing
