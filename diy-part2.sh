@@ -14,7 +14,7 @@
 #git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
 #git clone https://github.com/CrazyPegasus/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
 
-git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
+#git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
 git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-kucat
 #git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
@@ -31,7 +31,7 @@ git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-ku
  rm -rf feeds/luci/applications/luci-app-daed
  rm -rf feeds/packages/net/{dae,daed}
  git clone https://github.com/QiuSimons/luci-app-daed package/dae
-#git clone https://github.com/QiuSimons/luci-app-daed-next package/daed-next
+
 
 # rm -rf feeds/packages/net/{xray-core,chinadns-ng,hysteria,v2ray-plugin}
 
@@ -48,6 +48,9 @@ git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-ku
 #git clone https://github.com/jerrykuku/luci-app-argon-config.git package/luci-theme-argon-config
 # git clone https://github.com/muink/openwrt-einat-ebpf.git package/einat-ebpf
 # git clone https://github.com/muink/luci-app-einat.git package/luci-app-einat
+
+rm -rf feeds/packages/lang/node
+git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-23.05 feeds/packages/lang/node
 
 rm -rf feeds/packages/lang/golang
 git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
