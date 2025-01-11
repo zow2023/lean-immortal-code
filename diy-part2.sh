@@ -33,11 +33,11 @@ git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-ku
  git clone https://github.com/QiuSimons/luci-app-daed package/dae
 
 
-# rm -rf feeds/packages/net/{xray-core,chinadns-ng,hysteria,v2ray-plugin}
+rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
 
 # rm -rf feeds/luci/applications/luci-app-passwall
-# git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-# git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
 #git clone https://github.com/xiaorouji/openwrt-passwall.git -b  luci-smartdns-dev package/passwall/luci
 
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
