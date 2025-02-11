@@ -27,10 +27,10 @@ git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-ad
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 #git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
- rm -rf feeds/luci/applications/luci-app-dae
- rm -rf feeds/luci/applications/luci-app-daed
- rm -rf feeds/packages/net/{dae,daed}
- git clone https://github.com/QiuSimons/luci-app-daed package/dae
+ #rm -rf feeds/luci/applications/luci-app-dae
+ ##rm -rf feeds/luci/applications/luci-app-daed
+ #rm -rf feeds/packages/net/{dae,daed}
+ #git clone https://github.com/QiuSimons/luci-app-daed package/dae
 
 
 # rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
