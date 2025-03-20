@@ -35,11 +35,14 @@ git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tin
  git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 
-rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
-rm -rf feeds/luci/applications/luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
-#git clone https://github.com/xiaorouji/openwrt-passwall.git -b  luci-smartdns-dev package/passwall/luci
+#rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
+#rm -rf feeds/luci/applications/luci-app-passwall
+# 移除 openwrt feeds 自带的核心包
+rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
 
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 #rm -rf package/helloworld
