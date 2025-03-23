@@ -41,8 +41,8 @@ git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tin
 #rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 #git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
-#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
 
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 #rm -rf package/helloworld
