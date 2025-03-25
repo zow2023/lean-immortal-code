@@ -19,4 +19,4 @@
 #cd package/libs && mkdir -p libcron && mkdir -p Package/libcron/libs && wget -O Package/libcron/libs/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
 sed -i 's/--set=llvm.download-ci-llvm=true/--set=source.crates-io.replace-with=mirror \\\
         --set=source.mirror.registry=sparse+https:\/\/mirrors.bfsu.edu.cn\/crates.io-index\/ \\\
-        --set=llvm.download-ci-llvm=false/' package/feeds/packages/lang/rust/Makefile
+        --set=llvm.download-ci-llvm=false/' openwrt/feeds/packages/lang/rust/Makefile
