@@ -82,7 +82,6 @@ jobs:
     - name: fix rust
       run: |  
         cd openwrt
-           cd openwrt
         sed -i 's/--set=llvm.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
     - name: Load custom feeds
