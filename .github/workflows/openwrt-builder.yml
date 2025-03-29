@@ -79,10 +79,10 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt     
 
-    - name: fix rust
-      run: |  
-        cd openwrt
-        sed -i 's/--set=llvm.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+    #- name: fix rust
+     # run: |  
+      #  cd openwrt
+      #  sed -i 's/--set=llvm.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
 
     - name: Load custom feeds
       run: |
