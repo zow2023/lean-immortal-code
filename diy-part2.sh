@@ -28,11 +28,11 @@ git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-fileman
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 #git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
- #rm -rf feeds/luci/applications/luci-app-dae
-# rm -rf feeds/luci/applications/luci-app-daed
- #rm -rf feeds/packages/net/{dae,daed}
+rm -rf feeds/luci/applications/luci-app-dae
+rm -rf feeds/luci/applications/luci-app-daed
+rm -rf feeds/packages/net/{dae,daed}
  #git clone https://github.com/QiuSimons/luci-app-daed package/dae
- git clone https://github.com/x-wrt/com.x-wrt package/x
+git clone https://github.com/x-wrt/com.x-wrt package/x
  #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 
@@ -40,10 +40,10 @@ git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-fileman
 rm -rf feeds/luci/applications/luci-app-passwall
 # 移除 openwrt feeds 自带的核心包
 rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
-#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
 
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 #rm -rf package/helloworld
