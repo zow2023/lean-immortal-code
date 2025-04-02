@@ -30,10 +30,11 @@ git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-fileman
 
 rm -rf feeds/luci/applications/luci-app-dae
 rm -rf feeds/luci/applications/luci-app-daed
+rm -rf feeds/luci/applications/luci-app-homeproxy
 rm -rf feeds/packages/net/{dae,daed}
- #git clone https://github.com/QiuSimons/luci-app-daed package/dae
+# git clone https://github.com/QiuSimons/luci-app-daed package/dae
 git clone https://github.com/x-wrt/com.x-wrt package/x
- #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+# git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
