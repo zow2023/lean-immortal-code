@@ -16,4 +16,4 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-#cd package/libs && mkdir -p libcron && mkdir -p Package/libcron/libs && wget -O Package/libcron/libs/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
+cd package/libs && mkdir -p libcron && mkdir -p Package/libcron/libs && wget -O Package/libcron/libs/Makefile https://raw.githubusercontent.com/immortalwrt/packages/refs/heads/master/libs/libcron/Makefile
