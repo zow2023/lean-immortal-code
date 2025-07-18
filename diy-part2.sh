@@ -40,8 +40,8 @@ git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
 #rm -rf feeds/luci/applications/luci-app-passwall
 # 移除 openwrt feeds 自带的核心包
-rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
-git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+#rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 #git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
