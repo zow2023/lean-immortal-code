@@ -38,22 +38,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Free Disk Space
-      uses: jlumbroso/free-disk-space@main
-      with:
-      # this might remove tools that are actually needed,
-      # if set to "true" but frees about 6 GB
-        tool-cache: true
-      # all of these default to true, but feel free to set to
-      # "false" if necessary for your workflow
-        android: true
-        dotnet: true
-        haskell: true
-        large-packages: true
-        swap-storage: true
-
+    
     - name: Checkout
       uses: actions/checkout@main
+
+    - name: Free disk space
+      uses: sbwml/actions@free-disk
+      with:
+        build-mount-path: /builder
         
     - name: Initialization environment
       env:
@@ -115,19 +107,6 @@ jobs:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         
-    - name: Free Disk Space Before Build
-      run: |
-        echo "Disk space before cleanup:"
-        df -h
-        sudo rm -rf /usr/local/.ghcup
-        sudo rm -rf /opt/hostedtoolcache/CodeQL
-        sudo rm -rf /usr/local/lib/android/sdk/ndk
-        sudo rm -rf /usr/share/dotnet
-        sudo rm -rf /opt/ghc
-        sudo rm -rf /usr/local/share/boost  
-        sudo apt-get clean
-        echo "Disk space after cleanup:"
-        df -h
         
     - name: Download package
       id: package
