@@ -37,11 +37,11 @@ git clone https://github.com/QiuSimons/luci-app-daed package/dae
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 
-rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
+#rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
 #rm -rf feeds/luci/applications/luci-app-passwall
 # 移除 openwrt feeds 自带的核心包
 #rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
-git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 #git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
@@ -60,7 +60,7 @@ rm -rf feeds/packages/lang/node
 git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages-24.10 feeds/packages/lang/node
 
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 24.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # Modify default IP
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
@@ -69,4 +69,4 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Modify hostname
-sed -i 's/OpenWrt/LINKSYS/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/E8450/g' package/base-files/files/bin/config_generate
