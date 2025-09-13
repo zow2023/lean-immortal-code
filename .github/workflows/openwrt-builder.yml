@@ -10,12 +10,23 @@ on:
         default: 'false'
 
 env:
-  UPLOAD_BIN_DIR: 'false'
-  UPLOAD_FIRMWARE: 'true'
-  UPLOAD_RELEASE: 'false'
-  UPLOAD_GOFILE: 'false'
-  DEVICE_NAME: ''
-  FILE_DATE: ''
+  #REPO_URL: https://github.com/redfrog999/openwrt
+  #REPO_BRANCH: openwrt-21.02
+  FILES: ramips-hnat/files
+  FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
+  #CONFIG_FILE: ramips-hnat/.config.EA7500v2-21.02-ReConf
+  CONFIG_FILE: ramips-hnat/.config.EA7500v2-2203-PSW
+  DIY_P1_SH: ramips-hnat/diy-part1-1.sh
+  DIY_P2_SH: ramips-hnat/diy-part2-2.sh
+  PACKAGES_SH: ramips-hnat/Packages.sh
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: false
+  UPLOAD_WETRANSFER: false
+  UPLOAD_RELEASE: true
+  TZ: Asia/Shanghai
+  DEVICE_NAME: ""
+  FILE_DATE: ""
 
 jobs:
   build:  
@@ -66,11 +77,55 @@ jobs:
         sudo -E chmod 777 /mnt/work /mnt/work_dir /data_dir
         sudo -E mergerfs -o defaults,allow_other,use_ino,category.create=mfs /mnt/work_dir:/data_dir /mnt/work
         git clone --depth 1 --branch openwrt-22.03 https://github.com/openwrt/openwrt.git /mnt/work/openwrt
+        
+    
+     - name: Load custom configuration
+       run: |
+        cd /mnt/work/openwrt
+            # 复制feeds配置
+          if [ -f "$GITHUB_WORKSPACE/$FEEDS_CONF" ]; then
+            echo "Copying feeds config..."
+            cp $GITHUB_WORKSPACE/$FEEDS_CONF feeds.conf.default
+          fi
+          
+          # 复制配置文件
+          if [ -f "$GITHUB_WORKSPACE/$CONFIG_FILE" ]; then
+            echo "Copying config file..."
+            cp $GITHUB_WORKSPACE/$CONFIG_FILE .config
+          fi
+          
+          # 运行 DIY 脚本
+          if [ -f "$GITHUB_WORKSPACE/$DIY_P1_SH" ]; then
+            echo "Running DIY part 1 script..."
+            chmod +x $GITHUB_WORKSPACE/$DIY_P1_SH
+            $GITHUB_WORKSPACE/$DIY_P1_SH
+          fi
+
      - name: Update feeds
        run: cd /mnt/work/openwrt && ./scripts/feeds update -a
      - name: Install feeds
        run: cd /mnt/work/openwrt && ./scripts/feeds install -a
-      
+
+     - name: Run additional scripts
+       run: |
+          cd /mnt/work/openwrt
+          
+          # 运行更多的DIY脚本
+          if [ -f "$GITHUB_WORKSPACE/$DIY_P2_SH" ]; then
+            echo "Running DIY part 2 script..."
+            chmod +x $GITHUB_WORKSPACE/$DIY_P2_SH
+            $GITHUB_WORKSPACE/$DIY_P2_SH
+          fi
+
+     - name: Download package
+       id: package
+       run: |
+          cd /mnt/work/openwrt
+          make defconfig
+          make download -j$(nproc)
+          find dl -size -1024c -exec ls -l {} \;
+          find dl -size -1024c -exec rm -f {} \;
+          
      - name: Building
        run: |
         # 如果有自定义配置文件，则复制到源码目录
@@ -78,7 +133,6 @@ jobs:
         cd /mnt/work/openwrt
         # 如果没有配置文件，则使用默认配置（defconfig）
         [ -f .config ] || make defconfig
-        make download -j$(nproc)
         make -j$(nproc) V=s
         
      - name : Upload make.log if failure
