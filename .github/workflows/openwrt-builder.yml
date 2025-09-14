@@ -76,27 +76,12 @@ jobs:
         sudo -E mergerfs -o defaults,allow_other,use_ino,category.create=mfs /mnt/work_dir:/data_dir /mnt/work
         git clone --depth 1 --branch 25.04_b202509130803 https://github.com/x-wrt/x-wrt.git /mnt/work/openwrt
         
-     - name: Load custom configuration
+     - name: Load custom feeds
        run: |
+        [ -e $GITHUB_WORKSPACE/$FEEDS_CONF ] && mv $GITHUB_WORKSPACE/$FEEDS_CONF /mnt/work/openwrt/feeds.conf.default
+        chmod +x $GITHUB_WORKSPACE/$DIY_P1_SH
         cd /mnt/work/openwrt
-        # 复制feeds配置
-        if [ -f "$GITHUB_WORKSPACE/$FEEDS_CONF" ]; then
-          echo "Copying feeds config..."
-          cp $GITHUB_WORKSPACE/$FEEDS_CONF feeds.conf.default
-        fi
-        
-        # 复制配置文件
-        if [ -f "$GITHUB_WORKSPACE/$CONFIG_FILE" ]; then
-          echo "Copying config file..."
-          cp $GITHUB_WORKSPACE/$CONFIG_FILE .config
-        fi
-        
-        # 运行 DIY 脚本
-        if [ -f "$GITHUB_WORKSPACE/$DIY_P1_SH" ]; then
-          echo "Running DIY part 1 script..."
-          chmod +x $GITHUB_WORKSPACE/$DIY_P1_SH
-          $GITHUB_WORKSPACE/$DIY_P1_SH
-        fi
+        $GITHUB_WORKSPACE/$DIY_P1_SH
         
      - name: Update feeds
        run: cd /mnt/work/openwrt && ./scripts/feeds update -a
@@ -104,6 +89,14 @@ jobs:
      - name: Install feeds
        run: cd /mnt/work/openwrt && ./scripts/feeds install -a
 
+     - name: Load custom configuration
+       run: |
+           [ -e $GITHUB_WORKSPACE/files ] && mv $GITHUB_WORKSPACE/files /mnt/work/openwrt/files
+           [ -e $GITHUB_WORKSPACE/$CONFIG_FILE ] && mv $GITHUB_WORKSPACE/$CONFIG_FILE /mnt/work/openwrt/.config
+           chmod +x $GITHUB_WORKSPACE/$DIY_P2_SH
+           cd /mnt/work/openwrt
+           $GITHUB_WORKSPACE/$DIY_P2_SH
+           
      - name: fix rust
        run: |  
            cd /mnt/work/openwrt
@@ -115,23 +108,12 @@ jobs:
            mkdir -p package/libs/libcron && \
            wget -O package/libs/libcron/Makefile \
            https://raw.githubusercontent.com/immortalwrt/packages/master/libs/libcron/Makefile
-
-     - name: Run additional scripts
-       run: |
-        cd /mnt/work/openwrt
-        
-        # 运行更多的DIY脚本
-        if [ -f "$GITHUB_WORKSPACE/$DIY_P2_SH" ]; then
-          echo "Running DIY part 2 script..."
-          chmod +x $GITHUB_WORKSPACE/$DIY_P2_SH
-          $GITHUB_WORKSPACE/$DIY_P2_SH
-        fi
         
      - name: Download package
        id: package
        run: |
         cd /mnt/work/openwrt
-        
+        make defconfig
         make download -j$(nproc)
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
