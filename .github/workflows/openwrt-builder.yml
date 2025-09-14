@@ -104,6 +104,18 @@ jobs:
      - name: Install feeds
        run: cd /mnt/work/openwrt && ./scripts/feeds install -a
 
+     - name: fix rust
+       run: |  
+           cd openwrt
+           sed -i 's/--set=llvm.download-ci-llvm=true/--set=llvm.download-ci-llvm=false/' feeds/packages/lang/rust/Makefile
+
+     - name: Add libcron package
+       run: |
+           cd openwrt
+           mkdir -p package/libs/libcron && \
+           wget -O package/libs/libcron/Makefile \
+           https://raw.githubusercontent.com/immortalwrt/packages/master/libs/libcron/Makefile
+
      - name: Run additional scripts
        run: |
         cd /mnt/work/openwrt
