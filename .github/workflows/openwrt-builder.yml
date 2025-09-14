@@ -12,13 +12,13 @@ on:
 env:
   #REPO_URL: https://github.com/redfrog999/openwrt
   #REPO_BRANCH: openwrt-21.02
-  FILES: ramips-hnat/files
-  FEEDS_CONF: ramips-hnat/feeds.conf.default.bak
+  #FILES: ramips-hnat/files
+  FEEDS_CONF: feeds.conf.default
   #CONFIG_FILE: ramips-hnat/.config.EA7500v2-21.02-ReConf
-  CONFIG_FILE: ramips-hnat/.config.EA7500v2-2203-PSW
-  DIY_P1_SH: ramips-hnat/diy-part1-1.sh
-  DIY_P2_SH: ramips-hnat/diy-part2-2.sh
-  PACKAGES_SH: ramips-hnat/Packages.sh
+  CONFIG_FILE: x.config
+  DIY_P1_SH: diy-part1-1.sh
+  DIY_P2_SH: diy-part2-2.sh
+  #PACKAGES_SH: ramips-hnat/Packages.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -76,7 +76,7 @@ jobs:
         sudo -E mkdir -p /mnt/work
         sudo -E chmod 777 /mnt/work /mnt/work_dir /data_dir
         sudo -E mergerfs -o defaults,allow_other,use_ino,category.create=mfs /mnt/work_dir:/data_dir /mnt/work
-        git clone --depth 1 --branch openwrt-22.03 https://github.com/openwrt/openwrt.git /mnt/work/openwrt
+        git clone --depth 1 --branch 25.04_b202509130803 https://github.com/x-wrt/x-wrt.git /mnt/work/openwrt
         
     
      - name: Load custom configuration
