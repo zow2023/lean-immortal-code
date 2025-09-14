@@ -28,11 +28,11 @@ git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-ad
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 #git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-rm -rf feeds/luci/applications/luci-app-dae
-rm -rf feeds/luci/applications/luci-app-daed
+#rm -rf feeds/luci/applications/luci-app-dae
+#rm -rf feeds/luci/applications/luci-app-daed
 #rm -rf feeds/luci/applications/luci-app-homeproxy
-rm -rf feeds/packages/net/{dae,daed}
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
+#rm -rf feeds/packages/net/{dae,daed}
+#git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
@@ -40,8 +40,9 @@ git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
 #rm -rf feeds/luci/applications/luci-app-passwall
 # 移除 openwrt feeds 自带的核心包
-#rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
-#git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
+
+rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+git clone https://github.com/sbwml/openwrt_helloworld package/helloworld
 
 #git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci  
@@ -63,7 +64,7 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
 
 # Modify default IP
-sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.15.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
