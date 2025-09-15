@@ -111,6 +111,13 @@ jobs:
            mkdir -p package/libs/libcron && \
            wget -O package/libs/libcron/Makefile \
            https://raw.githubusercontent.com/immortalwrt/packages/master/libs/libcron/Makefile
+
+     - name: Fix OpenWrt PKG_HASH for daed
+       run: |
+        cd /mnt/work/openwrt
+        make package/dae/daed/download V=s || true
+        HASH=$(sha256sum dl/daed-*.tar.gz | awk '{print $1}')
+        sed -i "s/PKG_HASH:=skip/PKG_HASH:=${HASH}/" package/dae/daed/Makefile
         
      - name: Download package
        id: package
