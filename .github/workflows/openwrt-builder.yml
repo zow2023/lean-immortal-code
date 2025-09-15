@@ -114,15 +114,15 @@ jobs:
 
      - name: 修改 libcron Makefile
        run: |
-           cd package/libs/libcron
-           sed -i '/define Package\/libcron\/install/,/endef/ { 
-           /define Package\/libcron\/install/!d
-           /endef/!d
-           s/.*define Package\/libcron\/install/define Package\/libcron\/install/
-           a\
+           cd /mnt/work/openwrt
+           sed -i '/define Package\/libcron\/install/,/endef/c\
+           define Package\/libcron\/install\
            \t$(INSTALL_DIR) $(1)\/usr\/lib\/\
-           \t$(CP) $(PKG_INSTALL_DIR)\/usr\/lib\/libcron.so* $(1)\/usr\/lib\/
-           }' Makefile
+           \t$(CP) $(PKG_INSTALL_DIR)\/usr\/lib\/libcron.so* $(1)\/usr\/lib\/\
+           endef' package/libs/libcron/Makefile
+    
+           echo "验证修改："
+           grep -A 5 "define Package/libcron/install" package/libs/libcron/Makefile
   
      - name: Download package
        id: package
