@@ -108,8 +108,8 @@ jobs:
      - name: Add libcron package
        run: |
            cd /mnt/work/openwrt
-           mkdir -p package/libs/libcron && \
-           wget -O package/libs/libcron/Makefile \
+           mkdir -p package/libcron && \
+           wget -O package/libcron/Makefile \
            https://raw.githubusercontent.com/immortalwrt/packages/master/libs/libcron/Makefile  
   
      - name: Download package
