@@ -115,9 +115,10 @@ jobs:
      - name: Fix OpenWrt PKG_HASH for daed
        run: |
         cd /mnt/work/openwrt
-        make package/dae/daed/download V=s || true
+        make package/dae/daed/download V=s IGNORE_ERRORS=nocheck || true
         HASH=$(sha256sum dl/daed-*.tar.gz | awk '{print $1}')
         sed -i "s/PKG_HASH:=skip/PKG_HASH:=${HASH}/" package/dae/daed/Makefile
+        echo "PKG_HASH fixed to ${HASH}"
         
      - name: Download package
        id: package
