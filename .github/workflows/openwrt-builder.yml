@@ -108,9 +108,21 @@ jobs:
      - name: Add libcron package
        run: |
            cd /mnt/work/openwrt
-           mkdir -p package/libcron && \
-           wget -O package/libcron/Makefile \
+           mkdir -p package/libs/libcron && \
+           wget -O package/libs/libcron/Makefile \
            https://raw.githubusercontent.com/immortalwrt/packages/master/libs/libcron/Makefile  
+
+     - name: 修改 libcron Makefile
+       run: |
+           cd package/libs/libcron
+           sed -i '/define Package\/libcron\/install/,/endef/ { 
+           /define Package\/libcron\/install/!d
+           /endef/!d
+           s/.*define Package\/libcron\/install/define Package\/libcron\/install/
+           a\
+           \t$(INSTALL_DIR) $(1)\/usr\/lib\/\
+           \t$(CP) $(PKG_INSTALL_DIR)\/usr\/lib\/libcron.so* $(1)\/usr\/lib\/
+           }' Makefile
   
      - name: Download package
        id: package
