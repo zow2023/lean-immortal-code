@@ -15,7 +15,8 @@
 #git clone https://github.com/CrazyPegasus/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
 
 #git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
-git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 # git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-kucat
 #git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
