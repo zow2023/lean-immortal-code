@@ -29,7 +29,7 @@ git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+#rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 
 #git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
 
