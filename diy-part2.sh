@@ -17,6 +17,8 @@
 #git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
 #git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
 git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
+
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 # git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-kucat
 #git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
@@ -32,6 +34,7 @@ git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netp
 #rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 
 #git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
+git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
 
 #rm -rf feeds/luci/applications/luci-app-dae
 #rm -rf feeds/luci/applications/luci-app-daed
