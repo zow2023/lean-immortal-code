@@ -16,8 +16,8 @@
 
 #git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
 #git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
-#git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
 
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 # git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-kucat
