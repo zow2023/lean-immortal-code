@@ -40,7 +40,9 @@ git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
 #rm -rf feeds/luci/applications/luci-app-daed
 #rm -rf feeds/luci/applications/luci-app-homeproxy
 #rm -rf feeds/packages/net/{dae,daed}
-git clone https://github.com/zow2023/luci-app-daed package/dae
+
+git clone https://github.com/QiuSimons/luci-app-dae package/dae
+#git clone https://github.com/zow2023/luci-app-daed package/dae
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
