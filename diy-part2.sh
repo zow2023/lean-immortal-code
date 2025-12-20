@@ -34,10 +34,10 @@ git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netp
 
 rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 
-rm -rf feeds/luci/applications/luci-app-dae
-rm -rf feeds/luci/applications/luci-app-daed
-rm -rf feeds/luci/applications/luci-app-homeproxy
-rm -rf feeds/packages/net/{dae,daed}
+#rm -rf feeds/luci/applications/luci-app-dae
+#rm -rf feeds/luci/applications/luci-app-daed
+#rm -rf feeds/luci/applications/luci-app-homeproxy
+#rm -rf feeds/packages/net/{dae,daed}
 
 git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
 git clone https://github.com/zow2023/luci-app-dae package/dae
