@@ -12,7 +12,6 @@
 
 #git clone https://github.com/kiddin9/luci-app-dnsfilter package/luic-app-dnsfilter
 #git clone https://github.com/sirpdboy/luci-app-parentcontrol package/luci-app-parentcontrol
-#git clone https://github.com/CrazyPegasus/luci-app-accesscontrol-plus package/luci-app-accesscontrol-plus 
 
 #git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
 #git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
@@ -21,7 +20,7 @@ git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app
 #git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
 
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
-# git clone https://github.com/sirpdboy/luci-theme-kucat -b js package/luci-app-kucat
+
 #git clone https://github.com/animegasan/luci-app-quickstart package/luci-app-quickstart
 ##git clone https://github.com/brvphoenix/luci-app-wrtbwmon package/luci-app-wrtbwmon
 
@@ -32,7 +31,7 @@ git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-rm -rf feeds/packages/net/{xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+rm -rf feeds/packages/net/{smartdns,xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 
 #rm -rf feeds/luci/applications/luci-app-dae
 #rm -rf feeds/luci/applications/luci-app-daed
@@ -49,7 +48,7 @@ git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 rm -rf feeds/luci/applications/luci-app-smartdns
-rm -rf feeds/packages/net/smartdns  
+  
 git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 
