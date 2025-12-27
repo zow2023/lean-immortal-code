@@ -74,7 +74,7 @@ git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt -b packages
 #git clone https://github.com/sbwml/feeds_packages_lang_node-prebuilt #git clone https://github.com/sbwml/feeds_
 
 rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # Modify default IP
 sed -i 's/192.168.15.1/10.0.0.1/g' package/base-files/files/bin/config_generate
