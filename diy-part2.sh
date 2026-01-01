@@ -39,10 +39,11 @@ rm -rf feeds/packages/net/{smartdns,xray-core,v2ray-core,chinadns-ng,v2ray-geoda
 #rm -rf feeds/packages/net/{dae,daed}
 
 git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
-git clone https://github.com/Pacalini/luci-app-dae package/dae
+#git clone https://github.com/Pacalini/luci-app-dae package/dae
 #git clone https://github.com/zow2023/luci-app-daed package/dae
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
-git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
+#git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
+git clone https://github.com/kenzok8/small-package package/small
 
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
