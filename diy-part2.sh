@@ -15,9 +15,9 @@
 
 #git clone https://github.com/4IceG/luci-app-timecontrol package/luci-app-timecontrol
 #git clone https://github.com/xiaoxiao29/luci-app-adguardhome package/luci-app-adguardhome
-git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
+#git clone https://github.com/TanZhiwen2001/luci-app-adguardhome package/luci-app-adguardhome
 #git clone https://github.com/sirpdboy/luci-app-adguardhome package/luci-app-adguardhome
-#git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
+git clone https://github.com/w9315273/luci-app-adguardhome package/luci-app-adguardhome
 
 # git clone https://github.com/sbwml/luci-app-filemanager package/luci-app-filemanager
 
@@ -41,7 +41,7 @@ rm -rf feeds/packages/net/{smartdns,xray-core,v2ray-core,chinadns-ng,v2ray-geoda
 #git clone https://github.com/douglarek/dae-openwrt package/dae
 
 git clone https://github.com/immortalwrt/homeproxy package/luci-app-homeproxy
-#git clone https://github.com/Pacalini/luci-app-dae package/dae
+git clone https://github.com/Pacalini/luci-app-dae package/dae
 #git clone https://github.com/zow2023/luci-app-dae package/dae
 #git clone https://github.com/QiuSimons/luci-app-daed package/dae
 git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
@@ -51,9 +51,9 @@ git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
 
 rm -rf feeds/luci/applications/luci-app-smartdns
   
-git clone https://github.com/zow2023/openwrt-smartdns feeds/packages/net/smartdns
+#git clone https://github.com/zow2023/openwrt-smartdns feeds/packages/net/smartdns
 
-#git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
+git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
@@ -81,7 +81,7 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 26.x feeds/packages/lang/golang
 
 # Modify default IP
-sed -i 's/192.168.15.1/10.0.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
