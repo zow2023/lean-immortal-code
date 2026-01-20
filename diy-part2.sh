@@ -50,11 +50,10 @@ git clone https://github.com/zow2023/luci-app-dae package/dae
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
-rm -rf feeds/luci/applications/luci-app-smartdns
+#rm -rf feeds/luci/applications/luci-app-smartdns
   
 #git clone https://github.com/zow2023/openwrt-smartdns feeds/packages/net/smartdns
-
-git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
+#git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
