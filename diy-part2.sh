@@ -31,7 +31,7 @@ git clone https://github.com/gSpotx2f/luci-app-temp-status package/luci-app-temp
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netports
 
-rm -rf feeds/packages/net/{smartdns,xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
+#rm -rf feeds/packages/net/{smartdns,xray-core,v2ray-core,chinadns-ng,v2ray-geodata,sing-box}
 
 #rm -rf feeds/luci/applications/luci-app-dae
 #rm -rf feeds/luci/applications/luci-app-daed
@@ -50,10 +50,10 @@ git clone https://github.com/zow2023/luci-app-dae package/dae
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
-#rm -rf feeds/luci/applications/luci-app-smartdns
-  
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-smartdns  
 #git clone https://github.com/zow2023/openwrt-smartdns feeds/packages/net/smartdns
-#git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
+git clone https://github.com/pymumu/openwrt-smartdns feeds/packages/net/smartdns
 git clone https://github.com/pymumu/luci-app-smartdns feeds/luci/applications/luci-app-smartdns
 
 #rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
