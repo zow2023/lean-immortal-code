@@ -32,7 +32,7 @@ git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netp
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 
 # 移除 openwrt feeds 自带的核心包
-rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
+rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin,shadowsocks-libev}
 rm -rf feeds/packages/net/smartdns
 
 #rm -rf feeds/luci/applications/luci-app-dae
