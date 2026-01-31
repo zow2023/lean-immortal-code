@@ -32,7 +32,7 @@ git clone https://github.com/muink/luci-app-tn-netports package/luci-app-tn-netp
 #git clone https://github.com/muink/luci-app-tinyfilemanager package/luci-app-tinyfilemanager
 
 # 移除 openwrt feeds 自带的核心包
-rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin,shadowsocks-libev}
+rm -rf feeds/packages/net/{xray-core,sing-box,chinadns-ng,hysteria,v2ray-plugin}
 rm -rf feeds/packages/net/smartdns
 
 #rm -rf feeds/luci/applications/luci-app-dae
@@ -51,6 +51,7 @@ git clone https://github.com/zow2023/luci-app-dae package/dae
 git clone https://github.com/zow2023/openwrt_helloworld package/helloworld
 rm -rf package/helloworld/luci-app-dae
 rm -rf package/helloword/dae
+rm -rf package/helloword/shadowsocks-libev
 
 #git clone https://github.com/x-wrt/com.x-wrt package/x
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
